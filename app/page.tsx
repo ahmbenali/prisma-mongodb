@@ -3,8 +3,8 @@ import PostPage from '@/components/Post';
 import { getPosts } from '@/lib/posts';
 
 export default async function Home() {
-	const posts: Post[] = await getPosts();
-	console.log('POSTS: ', posts);
+	const posts = await getPosts();
+	// console.log('POSTS: ', posts);
 
 	return (
 		<div>
