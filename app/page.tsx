@@ -1,5 +1,4 @@
 import Post from '@/components/Post';
-import PostPage from '@/components/Post';
 import { getPosts } from '@/lib/posts';
 
 export default async function Home() {
@@ -15,7 +14,11 @@ export default async function Home() {
 				{posts?.map(post => (
 					<Post
 						key={post.id}
-						post={post}
+						id={post.id}
+						title={post.title}
+						content={post.content || ''}
+						authorName={post.author?.name || ''}
+						published={post.published || false}
 					/>
 				))}
 			</ul>

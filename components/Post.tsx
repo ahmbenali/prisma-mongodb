@@ -1,13 +1,21 @@
 interface Props {
-	post: Post;
+	id: string;
+	title: string;
+	authorName: string;
+	content: string;
+	published: boolean;
 }
 
-export default function Post({ post: { title, content, author } }: Props) {
+export default function Post({
+	id,
+	title,
+	authorName,
+	content,
+	published,
+}: Props) {
 	return (
-		<div className="p-5 bg-slate-500">
-			<h1 className="font-bold">{title}</h1>
-			<p>{author.name}</p>
-			<p>{content}</p>
+		<div>
+			<h1  className='text-2xl text-slate-300' >{title}</h1>
 		</div>
 	);
 }
